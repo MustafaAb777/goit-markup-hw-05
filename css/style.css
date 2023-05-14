@@ -600,6 +600,14 @@ button{
     background: rgba(46, 47, 66, 0.4);
 }
 
+
+.overlay.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+}
+
 .modal{
     position: absolute;
     width: 408px;
