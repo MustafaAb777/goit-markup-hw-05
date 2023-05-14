@@ -12,6 +12,9 @@
     --color-grey: #2e2f42;
     --color-white: #ffffff;
     --color-dairy: #fcfcfc;
+
+
+    --animation-speed: 250ms;
 }
 
 
@@ -527,6 +530,7 @@ button{
 }
 
 .portfolio-thumb{
+    overflow: hidden;
     position: relative;
 }
 
@@ -535,6 +539,7 @@ button{
     position: absolute;
     left: 0;
     top: 0;
+    transform: translateY(100%);
 
     height: 100%;
     width: 100%;
@@ -544,8 +549,16 @@ button{
     padding-right: 32px;
 
     background-color: var(--color-iris);
+
+    transition: transform var(--animation-speed);
 }
 
+
+.project-link:hover .portfolio-overlay,
+.project-link:focus .portfolio-overlay {
+    transform: translateY(0);
+
+}
 .overlay-content{
     line-height: 1.5;
 
