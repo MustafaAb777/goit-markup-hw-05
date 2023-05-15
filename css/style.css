@@ -509,14 +509,15 @@ button{
     letter-spacing: 0.04em;
     padding: 12px 24px;
     border-radius: 4px;
-    border: 1px solid var(--color-cornflower);
+    border-color: 1px solid var(--color-cornflower);
     color: var(--color-iris);
     background-color: var(--color-cloud);
+    transition: color var(--animation-speed), background-color var(--animation-speed), border-color var(--animation-speed), box-shadow var(--animation-speed);
 }
 
 .filters-btn:hover,
 .filters-btn:focus{
-    border: 1px solid transparent;
+    border-color: 1px solid transparent;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     color: var(--color-white);
     background-color: var(--color-ocean);
@@ -554,16 +555,17 @@ button{
 
     background-color: var(--color-iris);
 
-    transition: transform var(--animation-speed);
+    
 }
 
 
-.project-link:hover .portfolio-overlay,
-.project-link:focus .portfolio-overlay {
+.project-link:hover,
+.project-link:focus {
     transform: translateY(0);
 
 }
 .overlay-content{
+    
     line-height: 1.5;
 
     color: var(--color-cloud);
@@ -572,6 +574,7 @@ button{
 
 .project-link{
     display: block;
+    transition: transform var(--animation-speed);
 }
 
 .project-link:hover,
@@ -615,6 +618,7 @@ button{
     justify-content: center;
 
     background: rgba(46, 47, 66, 0.4);
+    transition: opacity var(--animation-speed), visibility var(--animation-speed);
 }
 
 
@@ -629,19 +633,19 @@ button{
     position: absolute;
     width: 408px;
     min-height: 576px;
+    top: 50%;
+    left: 50%;
     background: var(--color-dairy);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform var(--animation-speed);
 }
 
 .modal-close-btn{
     position: absolute;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: none;
+    padding: 0;
 
     right: 24px;
     top: 24px;
@@ -650,8 +654,23 @@ button{
     border-radius: 50%;
     background: var(--color-cornflower);
     border: 1px solid rgba(0, 0, 0, 0.1);
+    color: var(--color-navy-blue);
+    transition: background-color var(--animation-speed), border var(--animation-speed);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+    background-color: var(--color-ocean);
+    border: none;
+    color: var(--color-white);
 }
 
 .modal-close-icon{
-    fill: var(--color-navy-blue);
+    fill: currentColor;
+    transition: fill var(--animation-speed);
+}
+
+.modal-close-icon:hover,
+.modal-close-icon:focus {
+    
 }
